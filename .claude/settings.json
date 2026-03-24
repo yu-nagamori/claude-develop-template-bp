@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(npm test*)",
+      "Bash(npm run lint*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)*",
+      "Bash(git push --force)*"
+    ]
+  },
+  "hooks": {
+    "PreCommit": [
+      {
+        "command": "echo 'Running pre-commit checks...'"
+      }
+    ]
+  }
+}
