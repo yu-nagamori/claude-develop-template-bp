@@ -19,9 +19,13 @@
     ]
   },
   "hooks": {
-    "PreCommit": [
+    "PreToolUse": [
       {
-        "command": "echo 'Running pre-commit checks...'"
+        "matcher": "Bash(git commit*)",
+        "hook": {
+          "type": "command",
+          "command": "echo 'Running pre-commit checks...'"
+        }
       }
     ]
   }
